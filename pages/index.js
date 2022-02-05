@@ -1,3 +1,9 @@
+import Hero from "../components/hero";
+
 export default function Home() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <Hero />
+    </div>
+  );
 }
