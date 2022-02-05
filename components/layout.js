@@ -1,12 +1,14 @@
 import React from "react";
+import Footer from "./footer";
+import Header from "./header";
 
 function Layout({ children }) {
   return (
-    <div className="container mx-auto bg-indigo-300 ">
-      <header>Header</header>
+    <>
+      <Header />
       {children}
-      <footer>Footer</footer>
-    </div>
+      <Footer />
+    </>
   );
 }
 
