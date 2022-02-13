@@ -7,7 +7,8 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Ana Sayfa</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/aykaico.png" />
+        <meta name="robots" content="noindex" />
       </Head>
       <Layout>
         <Component {...pageProps} />
