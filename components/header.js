@@ -22,6 +22,7 @@ import {
   ShoppingBagIcon,
   XIcon,
 } from "@heroicons/react/outline";
+import Link from "next/link";
 
 const navigation = {
   categories: [
@@ -76,8 +77,10 @@ const navigation = {
     },
   ],
   pages: [
-    { name: "Hakkımızda", href: "#" },
-    { name: "İletişim", href: "#" },
+    { name: "Anasayfa", href: "/" },
+    { name: "Anasayfa 2", href: "/index2" },
+    { name: "Hakkımızda", href: "/hakkimizda" },
+    { name: "İletişim", href: "/iletisim" },
   ],
 };
 
@@ -236,7 +239,7 @@ export default function Header() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-rose-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          Get free delivery on orders over $100
+          5000₺ ve üzeri siparişlerde ücretsiz gönderim!
         </p>
 
         <nav
@@ -260,7 +263,8 @@ export default function Header() {
                   <span className="sr-only">Workflow</span>
                   <img
                     className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/workflow-mark.svg?color=rose&shade=600"
+                    //src="https://tailwindui.com/img/logos/workflow-mark.svg?color=rose&shade=600"
+                    src="/aykaicon.png"
                     alt=""
                   />
                 </a>
@@ -295,7 +299,7 @@ export default function Header() {
                             leaveFrom="opacity-100"
                             leaveTo="opacity-0"
                           >
-                            <Popover.Panel className="absolute inset-x-0 top-full text-sm text-gray-500">
+                            <Popover.Panel className="absolute inset-x-0 top-full z-10 text-sm text-gray-500">
                               {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                               <div
                                 className="absolute inset-0 top-1/2 bg-white shadow"
@@ -376,13 +380,11 @@ export default function Header() {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <a
-                      key={page.name}
-                      href={page.href}
-                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
-                    >
-                      {page.name}
-                    </a>
+                    <Link key={page.name} href={page.href}>
+                      <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                        {page.name}
+                      </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>

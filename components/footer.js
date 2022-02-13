@@ -4,35 +4,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-gray-100 text-gray-600 lg:text-left">
-      <div className="bg-gray-50">
-        <div className="mx-auto max-w-7xl py-12 px-4 sm:px-6 lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-          <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            <span className="block">Ready to dive in?</span>
-            <span className="block text-rose-600">
-              Start your free trial today.
-            </span>
-          </h2>
-          <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-            <div className="inline-flex rounded-md shadow">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700"
-              >
-                Get started
-              </a>
-            </div>
-            <div className="ml-3 inline-flex rounded-md shadow">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-rose-600 hover:bg-rose-50"
-              >
-                Learn more
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
+    <footer className="relative bg-gray-100 text-gray-600 lg:text-left">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:text-left lg:px-8">
         <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -54,6 +26,18 @@ function Footer() {
               </svg>
               Ayka Sandalye
             </h6>
+            <a
+              href="https://api.whatsapp.com/send?phone=905316445308&text=Merhaba,%20"
+              target={`_blank`}
+              className="fixed left-2 bottom-2 cursor-pointer rounded-full bg-green-600 p-2 shadow-2xl shadow-black/40 hover:shadow-black"
+            >
+              <svg viewBox="0 0 32 32" className="h-12 w-12 fill-white">
+                <path
+                  d=" M19.11 17.205c-.372 0-1.088 1.39-1.518 1.39a.63.63 0 0 1-.315-.1c-.802-.402-1.504-.817-2.163-1.447-.545-.516-1.146-1.29-1.46-1.963a.426.426 0 0 1-.073-.215c0-.33.99-.945.99-1.49 0-.143-.73-2.09-.832-2.335-.143-.372-.214-.487-.6-.487-.187 0-.36-.043-.53-.043-.302 0-.53.115-.746.315-.688.645-1.032 1.318-1.06 2.264v.114c-.015.99.472 1.977 1.017 2.78 1.23 1.82 2.506 3.41 4.554 4.34.616.287 2.035.888 2.722.888.817 0 2.15-.515 2.478-1.318.13-.33.244-.73.244-1.088 0-.058 0-.144-.03-.215-.1-.172-2.434-1.39-2.678-1.39zm-2.908 7.593c-1.747 0-3.48-.53-4.942-1.49L7.793 24.41l1.132-3.337a8.955 8.955 0 0 1-1.72-5.272c0-4.955 4.04-8.995 8.997-8.995S25.2 10.845 25.2 15.8c0 4.958-4.04 8.998-8.998 8.998zm0-19.798c-5.96 0-10.8 4.842-10.8 10.8 0 1.964.53 3.898 1.546 5.574L5 27.176l5.974-1.92a10.807 10.807 0 0 0 16.03-9.455c0-5.958-4.842-10.8-10.802-10.8z"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </a>
             <p>Ay Karanlığından Gelen Güzellik</p>
           </div>
           <div>
@@ -62,7 +46,7 @@ function Footer() {
             </h6>
             <p className="mb-4">
               <a href="#!" className="text-gray-600">
-                Angular
+                Svelte
               </a>
             </p>
             <p className="mb-4">
@@ -108,19 +92,30 @@ function Footer() {
               İletişim
             </h6>
             <p className="mb-4 flex items-center md:justify-start">
-              <HomeIcon className="mr-4 h-6 w-6" />
-              New York, NY 10012, US
+              <span>
+                <HomeIcon className="mr-4 h-6 w-6" />
+              </span>
+              <a
+                className="text-rose-600"
+                href="https://www.google.com/maps/dir//%C4%B0brahim+%C5%9Eenbel+Sk.+No:18+Mahmudiye+16400+%C4%B0neg%C3%B6l%2FBursa/@40.0758027,29.5181694,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14cbc95c73a0998b:0xd0b7130a81a54a71!2m2!1d29.5181694!2d40.0758027"
+              >
+                Mahmudiye Mah. İbrahim Şenbel Sk. No:18, 16400 İnegöl/Bursa
+              </a>
             </p>
             <p className="mb-4 flex items-center md:justify-start">
-              <MailIcon className="mr-4 h-6 w-6" />
+              <span>
+                <MailIcon className="mr-4 h-6 w-6" />
+              </span>
               <a className="text-rose-600" href="mailto:aykachair@gmail.com">
                 aykachair@gmail.com
               </a>
             </p>
             <p className="mb-4 flex items-center md:justify-start">
-              <PhoneIcon className="mr-4 h-6 w-6" />
-              <a href="tel:" className="text-rose-600">
-                + 01 234 567 88
+              <span>
+                <PhoneIcon className="mr-4 h-6 w-6" />
+              </span>
+              <a href="tel:0530 241 29 56" className="text-rose-600">
+                0530 241 29 56
               </a>
             </p>
           </div>
