@@ -5,6 +5,6 @@ module.exports = {
     defaultLocale: "tr",
   },
   images: {
-    domains: ["images.unsplash.com", "media.graphcms.com"],
+    domains: ["images.unsplash.com", "media.graphcms.com", "aykachair.com"],
   },
 };
