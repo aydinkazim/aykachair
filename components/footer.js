@@ -29,7 +29,7 @@ function Footer() {
             <a
               href="https://api.whatsapp.com/send?phone=905316445308&text=Merhaba,%20"
               target={`_blank`}
-              className="fixed left-2 bottom-2 cursor-pointer rounded-full bg-green-600 p-2 shadow-2xl shadow-black/40 hover:shadow-black"
+              className="fixed left-2 bottom-2 z-20 cursor-pointer rounded-full bg-green-600 p-2 shadow-2xl shadow-black/40 hover:shadow-black"
             >
               <svg viewBox="0 0 32 32" className="h-12 w-12 fill-white">
                 <path

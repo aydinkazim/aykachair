@@ -1,19 +1,3 @@
-/*
-  This example requires Tailwind CSS v2.0+ 
-  
-  This example requires some changes to your config:
-  
-  ```
-  // tailwind.config.js
-  module.exports = {
-    // ...
-    plugins: [
-      // ...
-      require('@tailwindcss/aspect-ratio'),
-    ],
-  }
-  ```
-*/
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
 import {
@@ -23,6 +7,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navigation = {
   categories: [
@@ -90,6 +75,7 @@ function classNames(...classes) {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <div className="bg-white">
@@ -166,7 +152,7 @@ export default function Header() {
                             key={item.name}
                             className="group relative text-sm"
                           >
-                            <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                            <div className="shadow_image_left aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                               <img
                                 src={item.imageSrc}
                                 alt={item.imageAlt}
@@ -225,7 +211,11 @@ export default function Header() {
                   <div key={page.name} className="flow-root">
                     <a
                       href={page.href}
-                      className="-m-2 block p-2 font-medium text-gray-900"
+                      className={`-m-2 block p-2 font-medium ${
+                        router.pathname === page.href
+                          ? "text-rose-600"
+                          : "text-gray-700 hover:text-rose-600"
+                      }`}
                     >
                       {page.name}
                     </a>
@@ -259,15 +249,13 @@ export default function Header() {
 
               {/* Logo */}
               <div className="ml-4 flex lg:ml-0">
-                <a href="#">
-                  <span className="sr-only">Workflow</span>
+                <Link href={"/"}>
                   <img
-                    className="h-8 w-auto"
-                    //src="https://tailwindui.com/img/logos/workflow-mark.svg?color=rose&shade=600"
+                    className="h-8 w-auto cursor-pointer"
                     src="/aykaicon.png"
-                    alt=""
+                    alt="Ayka Chair Logo"
                   />
-                </a>
+                </Link>
               </div>
 
               {/* Flyout menus */}
@@ -315,7 +303,7 @@ export default function Header() {
                                           key={item.name}
                                           className="group relative text-base sm:text-sm"
                                         >
-                                          <div className="aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
+                                          <div className="shadow_image_right aspect-w-1 aspect-h-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                                             <img
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
@@ -381,7 +369,13 @@ export default function Header() {
 
                   {navigation.pages.map((page) => (
                     <Link key={page.name} href={page.href}>
-                      <a className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">
+                      <a
+                        className={`flex items-center text-sm font-medium transition ${
+                          router.pathname === page.href
+                            ? "text-rose-600"
+                            : "text-gray-700 hover:text-rose-600"
+                        }`}
+                      >
                         {page.name}
                       </a>
                     </Link>
@@ -392,12 +386,28 @@ export default function Header() {
               <div className="ml-auto flex items-center">
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <a href="#" className="p-2 text-gray-400 hover:text-gray-500">
-                    <SearchIcon className="h-6 w-6" aria-hidden />
+                  <a
+                    target={"_blank"}
+                    rel="noopener"
+                    href="https://www.instagram.com/aykachair/"
+                    className="p-2 text-rose-600"
+                    title="Instagram'dan takip edebilirsiniz"
+                  >
+                    <svg
+                      className="h-6 w-6"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 448 512"
+                      stroke="currentColor"
+                      fill="none"
+                      aria-hidden
+                      fill="currentColor"
+                    >
+                      <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+                    </svg>
                   </a>
                 </div>
 
-                {/* Cart */}
+                {/* Cart 
                 <div className="ml-4 flow-root lg:ml-6">
                   <a href="#" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
@@ -406,6 +416,7 @@ export default function Header() {
                     />
                   </a>
                 </div>
+                */}
               </div>
             </div>
           </div>
