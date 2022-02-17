@@ -4,15 +4,15 @@ import React from "react";
 function Hero() {
   return (
     <div>
-      <main className="grid grid-cols-1 items-center gap-y-4 md:grid-cols-2">
-        <div className="sm:text-center lg:text-left">
+      <main className="grid grid-cols-1 items-center gap-y-4 py-8 lg:grid-cols-2 lg:py-0">
+        <div className="md:text-center lg:text-left">
           <h1 className="flex flex-col text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
             <span className="block xl:inline">Ayka Chair</span>{" "}
             <span className="block text-rose-600 xl:inline">
               Ay Karanlığından Gelen Güzellik
             </span>
           </h1>
-          <p className="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
+          <p className="mt-3 text-base sm:mx-auto sm:mt-5 sm:max-w-xl sm:text-lg md:mt-5 md:text-xl lg:mx-0">
             Ağacın kaliteye ve konfora dönüşüp evlerinize güler yüzle gelmesinin
             sebebi bizler olalım, siz isteyin biz yapalım keyfini sürmek size
             kalsın.

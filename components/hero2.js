@@ -9,13 +9,14 @@ function Hero2() {
           layout="fill"
           objectFit="cover"
           src="https://images.unsplash.com/photo-1527137342181-19aab11a8ee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80"
+          priority={true}
         />
       </div>
 
       <div className="hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-r sm:from-white sm:to-transparent" />
       <div className="relative mx-auto max-w-screen-xl px-4 py-32 md:px-0 lg:flex lg:items-center">
         <div className="max-w-xl text-center sm:text-left">
-          <h1 className="flex flex-col text-3xl font-extrabold sm:text-5xl">
+          <h1 className="flex flex-col text-3xl font-extrabold sm:text-5xl md:text-6xl">
             <span> Ayka Chair</span>
             <strong className="font-extrabold text-rose-700 sm:block">
               Ay Karanlığından <br /> Gelen Güzellik
