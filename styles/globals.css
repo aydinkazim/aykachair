@@ -4,6 +4,22 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+body {
   font-family: "Nunito", sans-serif;
+}
+
+.shadow_image_right {
+  box-shadow: rgba(225, 29, 72, 0.4) 5px 5px, rgba(225, 29, 72, 0.3) 10px 10px,
+    rgba(225, 29, 72, 0.2) 15px 15px, rgba(225, 29, 72, 0.1) 20px 20px,
+    rgba(225, 29, 72, 0.05) 25px 25px;
+}
+
+.shadow_image_left {
+  box-shadow: rgba(225, 29, 72, 0.4) -5px 5px, rgba(225, 29, 72, 0.3) -10px 10px,
+    rgba(225, 29, 72, 0.2) -15px 15px, rgba(225, 29, 72, 0.1) -20px 20px,
+    rgba(225, 29, 72, 0.05) -25px 25px;
+}
+
+.shadow_image {
+  box-shadow: rgba(225, 29, 72, 0.35) 0px 5px 15px;
 }
