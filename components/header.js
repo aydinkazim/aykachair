@@ -388,7 +388,7 @@ export default function Header() {
                 <div className="flex lg:ml-6">
                   <a
                     target={"_blank"}
-                    rel="noopener"
+                    rel="noopener noreferrer"
                     href="https://www.instagram.com/aykachair/"
                     className="p-2 text-rose-600"
                     title="Instagram'dan takip edebilirsiniz"
