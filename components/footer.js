@@ -116,6 +116,7 @@ function Footer() {
           <a
             className="transition hover:text-rose-600"
             target={"_blank"}
+            rel="noopener noreferrer"
             href="https://www.kazimaydin.dev"
           >
             kazimaydin.dev
