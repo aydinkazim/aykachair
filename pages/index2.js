@@ -2,12 +2,26 @@ import Image from "next/image";
 import React from "react";
 import Hero2 from "../components/hero2";
 import ProductCard from "../components/product-card";
+import { gql } from "@apollo/client";
+import client from "../apollo-client";
 
-function index2() {
+function Index2({ chairs }) {
   return (
     <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
       <Hero2 />
-      <ProductCard />
+      <div className="py-16 sm:py-24">
+        <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          {chairs.map((chair) => (
+            <ProductCard
+              key={chair.id}
+              title={chair.title}
+              image={chair.coverImage.url}
+              imageAlt={chair.coverImageAlt}
+              slug={chair.slug}
+            />
+          ))}
+        </div>
+      </div>
       <aside>
         <div className="py-16">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -71,4 +85,29 @@ function index2() {
   );
 }
 
-export default index2;
+export default Index2;
+
+export const getStaticProps = async (req, res) => {
+  const { data } = await client.query({
+    query: gql`
+      query getChairs {
+        chairs {
+          id
+          title
+          slug
+          coverImage {
+            url
+          }
+          coverImageAlt
+        }
+      }
+    `,
+  });
+
+  const { chairs } = data;
+  return {
+    props: {
+      chairs,
+    },
+  };
+};
