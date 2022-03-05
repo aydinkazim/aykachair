@@ -7,4 +7,43 @@ module.exports = {
   images: {
     domains: ["images.unsplash.com", "media.graphcms.com", "aykachair.com"],
   },
+  async redirects() {
+    return [
+      {
+        source: "/magaza",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/urun-kategori/genel/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/teklif-al/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/category/classic/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/category/basic/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/sesa/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/urun/:path*",
+        destination: "/sandalye/:path*",
+        permanent: true,
+      },
+    ];
+  },
 };
