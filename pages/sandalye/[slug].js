@@ -3,23 +3,38 @@ import React from "react";
 import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import { NextSeo } from "next-seo";
 
 function Product({ chair }) {
-  const content = {
-    children: [
-      {
-        type: "paragraph",
-        children: [
-          {
-            bold: true,
-            text: "Hello World!",
-          },
-        ],
-      },
-    ],
-  };
   return (
     <div>
+      <NextSeo
+        noindex={true}
+        nofollow={true}
+        title={chair.title + " | Sandalye" + " | Ayka Chair"}
+        description="This example uses more of the available config options."
+        canonical={`https://aykachair.com/sandalye/${chair.slug}`}
+        openGraph={{
+          url: `https://aykachair.com/sandalye/${chair.slug}`,
+          title: chair.title + " | Sandalye" + " | Ayka Chair",
+          description: "Open Graph Description",
+          images: [
+            {
+              url: chair.coverImage.url,
+              width: 800,
+              height: 600,
+              alt: chair.coverImageAlt,
+              type: "image/jpeg",
+            },
+          ],
+          site_name: "Ayka Chair",
+        }}
+        twitter={{
+          handle: "@aykachair",
+          site: "@aykachair",
+          cardType: "summary_large_image",
+        }}
+      />
       <div>
         <section>
           <div className="relative mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -93,6 +108,7 @@ export async function getStaticProps({ params }) {
       query getChairDetail($slug: String!) {
         chair(where: { slug: $slug }) {
           title
+          slug
           coverImage {
             url
             width
