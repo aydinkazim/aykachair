@@ -51,12 +51,12 @@ export default function ProductCard({ title, image, slug, imageAlt }) {
       <div className="group relative cursor-pointer rounded-lg transition-transform duration-700 hover:scale-105 hover:shadow-lg">
         <div className="aspect-w-1 aspect-h-1 xl:aspect-w-7 xl:aspect-h-8 w-full overflow-hidden rounded-lg bg-gray-200 ">
           <Image
-            className=""
+            className="bg-grad"
             src={image}
             alt={imageAlt}
             layout="responsive"
             width={600}
-            height={458}
+            height={600}
             objectFit="cover"
             objectPosition="center"
           />

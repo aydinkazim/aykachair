@@ -5,7 +5,7 @@ module.exports = {
     defaultLocale: "tr",
   },
   images: {
-    domains: ["images.unsplash.com", "media.graphcms.com", "aykachair.com"],
+    domains: ["images.unsplash.com", "media.graphassets.com", "aykachair.com"],
   },
   async redirects() {
     return [

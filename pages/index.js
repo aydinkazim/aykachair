@@ -1,4 +1,5 @@
 import { gql } from "@apollo/client";
+import Link from "next/link";
 import client from "../apollo-client";
 import Hero from "../components/hero";
 import ProductCard from "../components/product-card";
@@ -28,20 +29,18 @@ export default function Home({ chairs }) {
           </h2>
           <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
             <div className="inline-flex rounded-md shadow">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700"
-              >
-                Teklif Al
-              </a>
+              <Link href="/iletisim">
+                <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700">
+                  Teklif Al
+                </a>
+              </Link>
             </div>
             <div className="ml-3 inline-flex rounded-md shadow">
-              <a
-                href="#"
-                className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-rose-600 hover:bg-rose-50"
-              >
-                Mağaza
-              </a>
+              <Link href="/iletisim">
+                <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-rose-600 hover:bg-rose-50">
+                  Mağaza
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -72,5 +71,6 @@ export const getStaticProps = async (req, res) => {
     props: {
       chairs,
     },
+    revalidate: 10,
   };
 };

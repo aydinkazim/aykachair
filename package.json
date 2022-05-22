@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.5.10",
+    "@formcarry/react": "^1.0.3",
     "@graphcms/rich-text-react-renderer": "^0.4.2",
     "@headlessui/react": "^1.4.3",
     "@heroicons/react": "^1.0.5",

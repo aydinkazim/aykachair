@@ -4,6 +4,7 @@ import { gql } from "@apollo/client";
 import client from "../../apollo-client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { NextSeo } from "next-seo";
+import Link from "next/link";
 
 function Product({ chair }) {
   return (
@@ -42,7 +43,7 @@ function Product({ chair }) {
               <div className="relative order-2 grid grid-cols-1 gap-4 md:order-none">
                 <div className="aspect-w-1 aspect-h-1 ">
                   <Image
-                    className="rounded-xl"
+                    className="bg-grad rounded-xl"
                     src={chair.coverImage.url}
                     alt={chair.coverImageAlt}
                     layout="responsive"
@@ -51,6 +52,7 @@ function Product({ chair }) {
                     objectFit="cover"
                   />
                 </div>
+
                 <div className="grid grid-cols-2 gap-4 lg:mt-4">
                   {chair.gallery.map((image) => (
                     <div key={image.id} className="aspect-w-1 aspect-h-1">
@@ -63,12 +65,29 @@ function Product({ chair }) {
                 </div>
               </div>
               <div className="top-8 block md:sticky">
-                <h1 className="text-4xl font-bold">{chair.title}</h1>
-
+                <h1 className="text-5xl font-bold">{chair.title}</h1>
                 <section className="group relative mt-4">
-                  <article className="prose max-w-none pb-6">
-                    <RichText content={chair.content.raw} />
-                  </article>
+                  {chair.content && (
+                    <article className="prose max-w-none pb-6">
+                      <RichText content={chair.content.raw} />
+                    </article>
+                  )}
+                  <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+                    <div className="inline-flex rounded-md shadow">
+                      <Link href="/iletisim">
+                        <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-rose-600 px-5 py-3 text-base font-medium text-white hover:bg-rose-700">
+                          Teklif Al
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="ml-3 inline-flex rounded-md shadow">
+                      <Link href="/sandalyeler">
+                        <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-rose-600 hover:bg-rose-50">
+                          Mağaza
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
                 </section>
               </div>
             </div>
