@@ -5,14 +5,16 @@ import client from "../../apollo-client";
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Product({ chair }) {
+  const router = useRouter();
   return (
     <div>
       <NextSeo
         title={chair.title + " | Sandalye" + " | Ayka Chair"}
         description={"İnegöl Sandalye " + chair.title + " Model"}
-        canonical={`https://aykachair.com/sandalye/${chair.slug}`}
+        canonical={router.asPath}
         openGraph={{
           url: `https://aykachair.com/sandalye/${chair.slug}`,
           title: chair.title + " | Sandalye" + " | Ayka Chair",
