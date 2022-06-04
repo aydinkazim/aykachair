@@ -1,11 +1,6 @@
 import { Fragment, useState } from "react";
 import { Dialog, Popover, Tab, Transition } from "@headlessui/react";
-import {
-  MenuIcon,
-  SearchIcon,
-  ShoppingBagIcon,
-  XIcon,
-} from "@heroicons/react/outline";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,46 +11,49 @@ const navigation = {
       name: "Vitrin",
       featured: [
         {
-          name: "New Arrivals",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-01.jpg",
-          imageAlt:
-            "Models sitting back to back, wearing Basic Tee in black and bone.",
+          name: "Ayasofya",
+          href: "/sandalye/ayasofya",
+          imageSrc: "https://media.graphassets.com/KTFZ1MGISyWyCtuK2O6i",
+          imageAlt: "Mavi renkli altın süslemeleri ile Ayasofya model sandalye",
         },
         {
-          name: "Basic Tees",
-          href: "#",
-          imageSrc:
-            "https://tailwindui.com/img/ecommerce-images/mega-menu-category-02.jpg",
-          imageAlt:
-            "Close up of Basic Tee fall bundle with off-white, ochre, olive, and black tees.",
+          name: "Salotti",
+          href: "/sandalye/salotti",
+          imageSrc: "https://media.graphassets.com/rT1tHjaoQQ6pvQ5P25tW",
+          imageAlt: "Salotti model şık bir sandalye",
         },
       ],
       sections: [
         {
-          id: "clothing",
-          name: "Clothing",
+          id: "crea",
+          name: "Crea",
           items: [
-            { name: "Tops", href: "#" },
-            { name: "Dresses", href: "#" },
+            { name: "Crea", href: "/sandalye/crea" },
+            { name: "Crea 2", href: "/sandalye/crea-2" },
+            { name: "Crea Ahşap", href: "/sandalye/crea-ahsap" },
+            { name: "Crea Bien", href: "/sandalye/crea-bien" },
+            { name: "Crea Kapitone", href: "/sandalye/crea-kapitone" },
           ],
         },
         {
-          id: "accessories",
-          name: "Accessories",
+          id: "kapitone",
+          name: "Kapitone",
           items: [
-            { name: "Watches", href: "#" },
-            { name: "Wallets", href: "#" },
-            { name: "Bags", href: "#" },
+            { name: "Crea Kapitone", href: "/sandalye/crea-kapitone" },
+            {
+              name: "Gold Çima Kapitone",
+              href: "/sandalye/gold-cima-kapitone",
+            },
+            { name: "Gold Kapitone", href: "/sandalye/gold-kapitone" },
+            { name: "Sarmaşık Kapitone", href: "/sandalye/sarmasik-kapitone" },
           ],
         },
         {
-          id: "brands",
-          name: "Brands",
+          id: "sesa",
+          name: "Sesa",
           items: [
-            { name: "Full Nelson", href: "#" },
-            { name: "My Way", href: "#" },
+            { name: "Sesa Pedli", href: "/sandalye/sesa-pedli" },
+            { name: "Sesa Kasalı", href: "/sandalye/sesa-kasali" },
           ],
         },
       ],
@@ -63,7 +61,7 @@ const navigation = {
   ],
   pages: [
     { name: "Anasayfa", href: "/" },
-    { name: "Anasayfa 2", href: "/index2" },
+    { name: "Mağaza", href: "/magaza" },
     { name: "Hakkımızda", href: "/hakkimizda" },
     { name: "İletişim", href: "/iletisim" },
   ],
@@ -169,9 +167,9 @@ export default function Header() {
                               />
                               {item.name}
                             </a>
-                            <p aria-hidden className="mt-1">
+                            {/* <p aria-hidden className="mt-1">
                               Shop now
-                            </p>
+                            </p> */}
                           </div>
                         ))}
                       </div>
@@ -308,11 +306,12 @@ export default function Header() {
                                               src={item.imageSrc}
                                               alt={item.imageAlt}
                                               className="object-cover object-center"
+                                              height={300}
                                             />
                                           </div>
                                           <a
                                             href={item.href}
-                                            className="mt-6 block font-medium text-gray-900"
+                                            className="mt-6 block text-right text-lg font-medium text-gray-900"
                                           >
                                             <span
                                               className="absolute inset-0 z-10"
@@ -320,9 +319,10 @@ export default function Header() {
                                             />
                                             {item.name}
                                           </a>
-                                          <p aria-hidden className="mt-1">
+
+                                          {/* <p aria-hidden className="mt-1">
                                             Shop now
-                                          </p>
+                                          </p> */}
                                         </div>
                                       ))}
                                     </div>

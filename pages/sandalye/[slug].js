@@ -10,10 +10,8 @@ function Product({ chair }) {
   return (
     <div>
       <NextSeo
-        noindex={true}
-        nofollow={true}
         title={chair.title + " | Sandalye" + " | Ayka Chair"}
-        description="This example uses more of the available config options."
+        description={"İnegöl Sandalye " + chair.title + " Model"}
         canonical={`https://aykachair.com/sandalye/${chair.slug}`}
         openGraph={{
           url: `https://aykachair.com/sandalye/${chair.slug}`,
@@ -81,7 +79,7 @@ function Product({ chair }) {
                       </Link>
                     </div>
                     <div className="ml-3 inline-flex rounded-md shadow">
-                      <Link href="/sandalyeler">
+                      <Link href="/magaza">
                         <a className="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-rose-600 hover:bg-rose-50">
                           Mağaza
                         </a>

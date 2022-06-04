@@ -33,24 +33,24 @@ function Footer() {
               Ürünler
             </h6>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
-                Svelte
-              </a>
+              <Link href={"/sandalye/ayasofya"}>
+                <a className="text-gray-600">Ayasofya</a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
-                React
-              </a>
+              <Link href={"/sandalye/lady"}>
+                <a className="text-gray-600">Lady</a>
+              </Link>
             </p>
             <p className="mb-4">
-              <a href="#!" className="text-gray-600">
-                Vue
-              </a>
+              <Link href={"/sandalye/magnum"}>
+                <a className="text-gray-600">Magnum</a>
+              </Link>
             </p>
             <p>
-              <a href="#!" className="text-gray-600">
-                Laravel
-              </a>
+              <Link href={"/sandalye/milano"}>
+                <a className="text-gray-600">Milano</a>
+              </Link>
             </p>
           </div>
           <div>

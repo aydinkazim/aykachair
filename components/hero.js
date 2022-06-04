@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Hero() {
@@ -19,20 +20,18 @@ function Hero() {
           </p>
           <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div className="rounded-md shadow">
-              <a
-                href="#"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-600 px-8 py-3 text-base font-medium text-white hover:bg-rose-700 md:py-4 md:px-10 md:text-lg"
-              >
-                Teklif Al
-              </a>
+              <Link href="/iletisim">
+                <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-600 px-8 py-3 text-base font-medium text-white hover:bg-rose-700 md:py-4 md:px-10 md:text-lg">
+                  Teklif Al
+                </a>
+              </Link>
             </div>
             <div className="mt-3 sm:mt-0 sm:ml-3">
-              <a
-                href="#"
-                className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-100 px-8 py-3 text-base font-medium text-rose-700 hover:bg-rose-200 md:py-4 md:px-10 md:text-lg"
-              >
-                Mağaza
-              </a>
+              <Link href="/magaza">
+                <a className="flex w-full items-center justify-center rounded-md border border-transparent bg-rose-100 px-8 py-3 text-base font-medium text-rose-700 hover:bg-rose-200 md:py-4 md:px-10 md:text-lg">
+                  Mağaza
+                </a>
+              </Link>
             </div>
           </div>
         </div>
