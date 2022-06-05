@@ -27,7 +27,6 @@ function Iletisim() {
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
-              loading="lazy"
             />
           </section>
           <section className="">

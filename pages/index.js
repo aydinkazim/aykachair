@@ -1,7 +1,6 @@
 import { gql } from "@apollo/client";
 import { NextSeo } from "next-seo";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import client from "../apollo-client";
 import Hero from "../components/hero";
 import ProductCard from "../components/product-card";

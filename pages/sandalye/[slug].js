@@ -18,12 +18,10 @@ function Product({ chair }) {
         openGraph={{
           url: `https://aykachair.com/sandalye/${chair.slug}`,
           title: chair.title + " | Sandalye" + " | Ayka Chair",
-          description: "Open Graph Description",
+          description: "İnegöl Sandalye " + chair.title + " Model",
           images: [
             {
               url: chair.coverImage.url,
-              width: 800,
-              height: 600,
               alt: chair.coverImageAlt,
               type: "image/jpeg",
             },

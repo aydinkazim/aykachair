@@ -11,6 +11,12 @@ function Layout({ children }) {
     <>
       <NextSeo
         openGraph={{
+          images: [
+            {
+              url: "https://aykachair.com/ayka-logo.png",
+              type: "image/jpeg",
+            },
+          ],
           site_name: "Ayka Chair",
         }}
         twitter={{
