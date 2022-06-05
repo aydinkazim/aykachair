@@ -1,12 +1,14 @@
 import React from "react";
 import { useForm } from "@formcarry/react";
 
-import { CheckCircleIcon, ExclamationIcon } from "@heroicons/react/outline";
+import { CheckCircleIcon } from "@heroicons/react/outline";
 import { NextSeo } from "next-seo";
+
+const FORM_ID = process.env.NEXT_PUBLIC_FORM_ID;
 
 function Iletisim() {
   const { state, submit } = useForm({
-    id: "WZcivu0M29C",
+    id: FORM_ID,
   });
 
   return (

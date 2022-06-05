@@ -63,6 +63,11 @@ function Footer() {
               </Link>
             </p>
             <p className="mb-4">
+              <Link href={"/magaza"}>
+                <a className="text-gray-600">Mağaza</a>
+              </Link>
+            </p>
+            <p className="mb-4">
               <Link href={"/hakkimizda"}>
                 <a className="text-gray-600">Hakkımızda</a>
               </Link>
