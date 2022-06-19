@@ -13,6 +13,9 @@ export default function Home({ chairs }) {
         description="Ağacın kaliteye ve konfora dönüşüp evlerinize güler yüzle gelmesinin
             sebebi bizler olalım, siz isteyin biz yapalım keyfini sürmek size
             kalsın."
+        openGraph={{
+          url: "https://www.aykachair.com/",
+        }}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <Hero />

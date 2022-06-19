@@ -39,6 +39,11 @@ module.exports = {
         destination: "/sandalye/:path*",
         permanent: true,
       },
+      {
+        source: "/urun-kategori/sandalye",
+        destination: "/magaza",
+        permanent: true,
+      },
     ];
   },
 };
