@@ -89,10 +89,11 @@ function Footer() {
                 <HomeIcon className="mr-4 h-6 w-6" />
               </span>
               <a
+                target={"_blank"}
                 className="text-rose-600"
-                href="https://www.google.com/maps/dir//%C4%B0brahim+%C5%9Eenbel+Sk.+No:18+Mahmudiye+16400+%C4%B0neg%C3%B6l%2FBursa/@40.0758027,29.5181694,16z/data=!4m8!4m7!1m0!1m5!1m1!1s0x14cbc95c73a0998b:0xd0b7130a81a54a71!2m2!1d29.5181694!2d40.0758027"
+                href="https://goo.gl/maps/Sz7uhwM2Tvbbia3W6"
               >
-                Mahmudiye Mah. İbrahim Şenbel Sk. No:18, 16400 İnegöl/Bursa
+                Mahmudiye Mah. İbrahim Şenbel Sk. No:16, 16400 İnegöl/Bursa
               </a>
             </p>
             <p className="mb-4 flex items-center md:justify-start">

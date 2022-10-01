@@ -22,11 +22,13 @@ function Iletisim() {
         <div className="grid grid-cols-1 gap-5 py-8 md:grid-cols-2 md:py-16">
           <section className="h-64 md:h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.9823057577823!2d29.515980715641525!3d40.07580678422637!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbc95c73a0998b%3A0xd0b7130a81a54a71!2zTWFobXVkaXllLCDEsGJyYWhpbSDFnmVuYmVsIFNrLiBObzoxOCwgMTY0MDAgxLBuZWfDtmwvQnVyc2E!5e0!3m2!1str!2str!4v1624026240659!5m2!1str!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.9811215025643!2d29.518136700000003!3d40.075833200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbc95c733bc92d%3A0x3fd1b190a9a0b1af!2zTWFobXVkaXllLCDEsGJyYWhpbSDFnmVuYmVsIFNrLiBObzoxNiwgMTY0MDAgxLBuZWfDtmwvQnVyc2E!5e0!3m2!1str!2str!4v1664659495404!5m2!1str!2str"
               width="100%"
               height="100%"
               style={{ border: 0 }}
               allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+              className="rounded-lg shadow-lg"
             />
           </section>
           <section className="">
