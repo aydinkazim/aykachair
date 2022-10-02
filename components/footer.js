@@ -90,6 +90,7 @@ function Footer() {
               </span>
               <a
                 target={"_blank"}
+                rel="noopener noreferrer"
                 className="text-rose-600"
                 href="https://goo.gl/maps/Sz7uhwM2Tvbbia3W6"
               >
@@ -120,10 +121,10 @@ function Footer() {
         <div>
           <span>made with 😻 by </span>
           <a
-            className="transition hover:text-rose-600"
             target={"_blank"}
             rel="noopener noreferrer"
             href="https://www.kazimaydin.dev"
+            className="transition hover:text-rose-600"
           >
             kazimaydin.dev
           </a>

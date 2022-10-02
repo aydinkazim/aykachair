@@ -17,9 +17,23 @@ function Iletisim() {
         title="Ayka Chair | İletişim | İnegöl Sandalye"
         description="Ayka Chair ürünleriyle ilgili sorularınızı sormak ve sipariş vermek için hemen tıkla!"
       />
-
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-5 py-8 md:grid-cols-2 md:py-16">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 md:py-16 lg:px-8">
+        <section>
+          <h1 className="text-4xl font-bold tracking-tight text-rose-600 sm:text-5xl md:text-6xl">
+            İletişim
+          </h1>
+          <p className="my-4 text-lg duration-200 hover:text-rose-600 md:justify-start">
+            <a
+              target={"_blank"}
+              rel="noopener noreferrer"
+              href="https://goo.gl/maps/Sz7uhwM2Tvbbia3W6"
+            >
+              <strong>Adres:</strong> Mahmudiye Mah. İbrahim Şenbel Sk. No:16,
+              16400 İnegöl/Bursa
+            </a>
+          </p>
+        </section>
+        <div className="grid grid-cols-1 gap-5 py-4 md:grid-cols-2 md:py-8">
           <section className="h-64 md:h-full">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.9811215025643!2d29.518136700000003!3d40.075833200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbc95c733bc92d%3A0x3fd1b190a9a0b1af!2zTWFobXVkaXllLCDEsGJyYWhpbSDFnmVuYmVsIFNrLiBObzoxNiwgMTY0MDAgxLBuZWfDtmwvQnVyc2E!5e0!3m2!1str!2str!4v1664659495404!5m2!1str!2str"
