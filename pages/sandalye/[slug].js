@@ -53,9 +53,12 @@ function Product({ chair }) {
 
                 <div className="grid grid-cols-2 gap-4 lg:mt-4">
                   {chair.gallery.map((image) => (
-                    <div key={image.id} className="aspect-w-1 aspect-h-1">
+                    <div
+                      key={image.id}
+                      className="aspect-w-1 aspect-h-1 hover:z-50"
+                    >
                       <img
-                        className="rounded-xl object-cover"
+                        className="rounded-xl border object-cover transition hover:scale-150 "
                         src={image.url}
                       />
                     </div>
