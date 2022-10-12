@@ -115,5 +115,6 @@ export const getStaticProps = async (req, res) => {
     props: {
       chairs,
     },
+    revalidate: 10,
   };
 };
