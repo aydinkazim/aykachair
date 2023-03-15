@@ -13,7 +13,7 @@ function Layout({ children }) {
         openGraph={{
           images: [
             {
-              url: "https://aykachair.com/ayka-logo.png",
+              url: "https://aykachair.com.tr/ayka-logo.png",
               type: "image/jpeg",
             },
           ],

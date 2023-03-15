@@ -14,7 +14,23 @@ export default function Home({ chairs }) {
             sebebi bizler olalım, siz isteyin biz yapalım keyfini sürmek size
             kalsın."
         openGraph={{
-          url: "https://www.aykachair.com/",
+          url: `https://aykachair.com.tr/`,
+          title: "Ayka Chair | İnegöl Sandalye",
+          description:
+            "Ağacın kaliteye ve konfora dönüşüp evlerinize güler yüzle gelmesinin sebebi bizler olalım, siz isteyin biz yapalım keyfini sürmek size kalsın.",
+          images: [
+            {
+              url: "https://aykachair.com.tr/og.png",
+              alt: "Ayka Chair | İnegöl Sandalye",
+              type: "image/jpeg",
+            },
+          ],
+          site_name: "Ayka Chair",
+        }}
+        twitter={{
+          handle: "@aykachair",
+          site: "@aykachair",
+          cardType: "summary_large_image",
         }}
       />
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

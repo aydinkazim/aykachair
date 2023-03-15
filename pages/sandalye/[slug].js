@@ -16,7 +16,7 @@ function Product({ chair }) {
         description={"İnegöl Sandalye " + chair.title + " Model"}
         canonical={router.asPath}
         openGraph={{
-          url: `https://aykachair.com/sandalye/${chair.slug}`,
+          url: `https://aykachair.com.tr/sandalye/${chair.slug}`,
           title: chair.title + " | Sandalye" + " | Ayka Chair",
           description: "İnegöl Sandalye " + chair.title + " Model",
           images: [

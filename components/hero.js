@@ -38,7 +38,7 @@ function Hero() {
         <div>
           <Image
             src={
-              "https://images.unsplash.com/photo-1619596658767-f3bbb82b0dee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80"
+              "https://images.unsplash.com/photo-1619596658767-f3bbb82b0dee?w=640&q=80"
             }
             width={640}
             height={640}
