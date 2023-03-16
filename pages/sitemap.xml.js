@@ -1,15 +1,8 @@
 import fs from "fs";
 import client from "../apollo-client";
 import { gql } from "@apollo/client";
-import { useRouter } from "next/router";
-import Layout from "../components/Layout";
 
-function Sitemap() {
-  const router = useRouter();
-
-  // Sitemap sayfası, tarayıcıya sadece bir XML dosyası gönderir, sayfa içeriği olmadığı için null döndürülür.
-  return null;
-}
+function Sitemap() {}
 
 function getChairsUrls(chairs) {
   return chairs.map((chair) => `/sandalye/${chair.slug}`);
