@@ -21,11 +21,6 @@ export default function Document() {
         <NextScript />
         <noscript
           dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KDFWG4F" height="0" width="0" style="display: none; visibility: hidden;" />`,
-          }}
-        />
-        <noscript
-          dangerouslySetInnerHTML={{
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=${TAG_MANAGER}" height="0" width="0" style="display: none; visibility: hidden;" />`,
           }}
         />
