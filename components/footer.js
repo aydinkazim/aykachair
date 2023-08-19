@@ -4,6 +4,7 @@ import Link from "next/link";
 import React from "react";
 
 function Footer() {
+  let year = new Date().getFullYear();
   return (
     <footer className="relative bg-gray-100 text-gray-600 lg:text-left">
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 md:text-left lg:px-8">
@@ -117,7 +118,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center gap-5 bg-gray-200 p-6 text-center">
-        <span>© 2022 Ayka Sandalye</span>
+        <span>© {year} Ayka Sandalye</span>
         <div>
           <span>made with 😻 by </span>
           <a
