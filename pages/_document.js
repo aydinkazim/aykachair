@@ -6,6 +6,7 @@ export default function Document() {
   return (
     <Html className="scroll-smooth">
       <Head>
+        <link rel="icon" href="/aykaico.png" />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
