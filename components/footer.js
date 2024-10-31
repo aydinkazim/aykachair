@@ -93,9 +93,9 @@ function Footer() {
                 target={"_blank"}
                 rel="noopener noreferrer"
                 className="text-rose-600"
-                href="https://goo.gl/maps/Sz7uhwM2Tvbbia3W6"
+                href="https://maps.app.goo.gl/q4nE4qAu5qkHTPab7"
               >
-                Mahmudiye Mah. İbrahim Şenbel Sk. No:16, 16400 İnegöl/Bursa
+                Mahmudiye Mahallesi, 23. Mobilya Sokak, No:7, 16400 İnegöl/Bursa
               </a>
             </p>
             <p className="mb-4 flex items-center md:justify-start">
@@ -110,8 +110,8 @@ function Footer() {
               <span>
                 <PhoneIcon className="mr-4 h-6 w-6" />
               </span>
-              <a href="tel:0530 241 29 56" className="text-rose-600">
-                0530 241 29 56
+              <a href="tel:+905316445308" className="text-rose-600">
+                0531 644 53 08
               </a>
             </p>
           </div>
