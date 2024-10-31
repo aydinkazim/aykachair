@@ -26,17 +26,17 @@ function Iletisim() {
             <a
               target={"_blank"}
               rel="noopener noreferrer"
-              href="https://goo.gl/maps/Sz7uhwM2Tvbbia3W6"
+              href="https://maps.app.goo.gl/q4nE4qAu5qkHTPab7"
             >
-              <strong>Adres:</strong> Mahmudiye Mah. İbrahim Şenbel Sk. No:16,
-              16400 İnegöl/Bursa
+              <strong>Adres:</strong> Mahmudiye Mahallesi, 23. Mobilya Sokak,
+              No:7, 16400 İnegöl/Bursa
             </a>
           </p>
         </section>
         <div className="grid grid-cols-1 gap-5 py-4 md:grid-cols-2 md:py-8">
           <section className="h-64 md:h-full">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3052.9811215025643!2d29.518136700000003!3d40.075833200000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbc95c733bc92d%3A0x3fd1b190a9a0b1af!2zTWFobXVkaXllLCDEsGJyYWhpbSDFnmVuYmVsIFNrLiBObzoxNiwgMTY0MDAgxLBuZWfDtmwvQnVyc2E!5e0!3m2!1str!2str!4v1664659495404!5m2!1str!2str"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d763.2774773321273!2d29.536129069609498!3d40.07296039821858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cbc93fac93980b%3A0xe7f4e602db1d33f6!2sMahmudiye%2C%2023.%20Mobilya%20Sk.%20No%3A7%2C%2016400%20%C4%B0neg%C3%B6l%2FBursa!5e0!3m2!1str!2str!4v1730401750426!5m2!1str!2str"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -45,8 +45,8 @@ function Iletisim() {
               className="rounded-lg shadow-lg"
             />
           </section>
-          <section className="">
-            <div className="rounded-lg bg-white p-8 drop-shadow-lg lg:col-span-3 lg:p-12">
+          <section>
+            <div className="rounded-lg border bg-white p-8 drop-shadow-lg lg:col-span-3 lg:p-12">
               {state.submitted ? (
                 <div
                   className="rounded-b border-t-4 border-teal-500 bg-teal-100 px-4 py-3 text-teal-900 shadow-md"

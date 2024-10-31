@@ -227,8 +227,8 @@ export default function Header() {
 
       <header className="relative bg-white">
         <p className="flex h-10 items-center justify-center bg-rose-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
-          <a href="tel:0530 241 29 56" className="text-white">
-            Hemen Ara: 0530 241 29 56
+          <a href="tel:+905316445308" className="text-white">
+            Hemen Ara: 0531 644 53 08
           </a>
         </p>
 
